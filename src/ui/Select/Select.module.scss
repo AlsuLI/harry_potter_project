@@ -1,0 +1,15 @@
+.header__select {
+width: 216px;
+height: 38px;
+background-color: #fff;
+color: #818182;
+border-radius: 4px;
+outline: none;
+
+  &__wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #818182;
+
+  }
+}

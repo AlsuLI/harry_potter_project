@@ -1,0 +1,40 @@
+.card {
+&__wrapper{
+  position: relative;
+width: 334px;
+height: 409px;
+border-radius: 4px;
+border: 1px #DEE2E6 solid;
+
+}
+&__image {
+  width: 334px ;
+  height: 192px;
+  object-fit: cover;
+  object-position: center;
+}
+&__text__name {
+  font-size: 20px;
+  font-weight: 800;
+}
+&__text__holder {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140px;
+  padding-top: 7px;
+} 
+&__text__wrapper{
+  padding: 24px;  
+  }
+
+&__button__like {
+position: absolute;
+right: 50px;
+background: local;
+
+}
+}

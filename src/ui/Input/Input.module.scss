@@ -1,0 +1,22 @@
+.header{
+
+ &__input__wrapper {
+  display: flex; 
+  flex-direction: column;
+
+ 
+ }  
+ &__input {
+  width: 452px;
+ height: 38px;
+ margin-top: 3px;
+ &__label {
+  color: #818182;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 4px;
+ }
+ }
+  
+}
+ 
