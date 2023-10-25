@@ -7,7 +7,6 @@ import { NotFound } from "./pages/NotFound/NotFound";
 
 
 function App() {
-   
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
@@ -15,7 +14,6 @@ function App() {
       .then((response) => response.json())
       .then((students) => setStudents(students));
   }, []);
-  console.log(students);
 
   const [searcher, setSearcher] = useState("");
   const inputSearcher = (e) => setSearcher(e.target.value);
