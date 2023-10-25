@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card } from "../../components/Card/Card";
-import { students } from "../../components/Card/Students";
 import Button from "../../layout/assets/Button.svg";
 import { Layout } from '../../layout/Layout';
 import { Link } from "react-router-dom";
@@ -12,7 +11,8 @@ export const Home = ({
   schoolSelector,
   clickLike,
   collect,
-  removeLike
+  removeLike,
+  students
 }) => {
   return (
     <>

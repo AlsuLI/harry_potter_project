@@ -1,7 +1,6 @@
 import React from "react";
 import { LayoutFavourites } from "../../layout/LayoutFavourites";
 import { Card } from "../../components/Card/Card";
-import { students } from "../../components/Card/Students";
 
 export const Favourites = ({
   searcher,
@@ -11,7 +10,7 @@ export const Favourites = ({
   clickLike,
   collect,
   removeLike,
-
+  students
 }) => {
   return (
     <LayoutFavourites
@@ -22,11 +21,11 @@ export const Favourites = ({
       clickLike={clickLike}
       collect={collect}
       removeLike={removeLike}
-
+      students={students}
     >
       {students
         .filter((elem) => {
-        return  collect !== '' ? elem.id === collect : ''
+          return collect.includes(elem.id) ? elem : false;
         })
         .map((el) => (
           <Card

@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
 import "./global.scss";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { Favourites } from "./pages/Favourites/Favourites";
 import { NotFound } from "./pages/NotFound/NotFound";
-import { students } from "./components/Card/Students";
 
 
 function App() {
+   
+  const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    fetch("https://hp-api.onrender.com/api/characters")
+      .then((response) => response.json())
+      .then((students) => setStudents(students));
+  }, []);
+  console.log(students);
+
   const [searcher, setSearcher] = useState("");
   const inputSearcher = (e) => setSearcher(e.target.value);
 
@@ -31,15 +40,7 @@ function App() {
     [collect]
   );
 
-  const [favs, setFavs] = useState()
-
-  // const makeFavs = () => {
-  // setFavs(collect.filter((el) => el.id === favArray[0] ))
-  // }
-
-console.log(students[0].id);
-
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: (
@@ -51,6 +52,7 @@ console.log(students[0].id);
           clickLike={clickLike}
           collect={collect}
           removeLike={removeLike}
+          students={students}
         />
       ),
     },
@@ -65,7 +67,7 @@ console.log(students[0].id);
           clickLike={clickLike}
           collect={collect}
           removeLike={removeLike}
-
+          students={students}
         />
       ),
     },
