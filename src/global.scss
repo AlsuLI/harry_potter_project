@@ -7,7 +7,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 .button__show__likes {
-  position: absolute;
   position: fixed;
   z-index: 1;
   right: 101px;
@@ -19,6 +18,11 @@ body {
   border: none;
   box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.2);
   bottom: 23px;
+  display: flex;
+justify-content: center;
+align-items: center;
+justify-content: space-between;
+padding: 13px 21px 12px 13px;
 }
 .link__show__likes {
   text-decoration: none;
